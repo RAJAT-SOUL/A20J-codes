@@ -1,0 +1,19 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        string g;
+        cin>>g;
+        if(g.size()>10)
+        {
+            cout<<g[0]<<(g.size()-2)<<g[g.size()-1]<<"\n";
+        }
+        else{cout<<g<<"\n";}
+    }
+
+}
