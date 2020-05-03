@@ -1,0 +1,41 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <string>
+
+using namespace std;
+
+int main(void) {
+    string s1,s2;
+
+   vector<string> v1 ;
+   vector<string> v2 ;
+
+   cin>>s1>>s2;
+   transform(s1.begin(),s1.end(),s1.begin(),::tolower);
+   transform(s2.begin(),s2.end(),s2.begin(),::tolower);
+   v1.push_back(s1);
+   v2.push_back(s2);
+   bool result;
+
+   result = lexicographical_compare(v1.begin(), v1.end(), v2.begin(), v2.end());
+
+   if (result == false)
+   {
+       if(s1==s2)
+       {
+         cout<<"0"<<endl;
+       }
+       else
+        {
+        cout << "1" << endl;
+       }
+
+   }
+
+   else if (result == true)
+      cout << "-1" << endl;
+
+
+   return 0;
+}
